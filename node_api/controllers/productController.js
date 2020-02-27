@@ -1,18 +1,29 @@
-const mongoClient       = require('mongodb').MongoClient;
-const assert            = require('assert');
-const express           = require('express')
-const router            = express.Router();
-const auth              = require('../middleware/auth')
-
-const mongoDbUrl        = process.env.MONGODB_URL
-const mongoDbName       = process.env.MONGODB_NAME;
-const bodyParser        = require( 'body-parser' );      
-
-router.use( bodyParser.urlencoded({ extended: false }) );              // parse application/json
-
 /** 
  * Product API
  */
+
+/**
+ * Requirements
+ */
+const assert            = require('assert');
+const express           = require('express')
+const router            = express.Router();
+/**
+ * Parser
+ */
+const bodyParser        = require( 'body-parser' );      
+router.use( bodyParser.urlencoded({ extended: false }) );              // parse application/json
+/**
+ * Middleware
+ */
+const auth              = require('../middleware/auth')
+/**
+ * Mongo DB Config
+ */
+const mongoClient       = require('mongodb').MongoClient;
+const mongoDbUrl        = process.env.MONGODB_URL
+const mongoDbName       = process.env.MONGODB_NAME;
+
     
 /** 
  * GET /products
