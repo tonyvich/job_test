@@ -8,8 +8,21 @@ import ProductsList 	from './components/products/productsList/productsList';
 import ProductsCreate	from './components/products/productCreate/productCreate';
 import ProductEdit		from './components/products/productEdit/productEdit';
 
+/**
+ * Base App Class
+ *
+ * @export
+ * @class App
+ * @extends {React.Component}
+ */
 export default class App extends React.Component {
 	
+	/**
+	 * Render Component
+	 *
+	 * @returns
+	 * @memberof App
+	 */
 	render() {
 		return( 		
 			<Layout>

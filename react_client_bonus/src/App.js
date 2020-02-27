@@ -1,14 +1,14 @@
-import React from 'react';
-import { Route, Switch } 	from 'react-router-dom'
-import { BrowserRouter as Router } from 'react-router-dom'
+// Imports
+import React 						from 'react';
+import { Route, Switch } 			from 'react-router-dom'
+import { BrowserRouter as Router } 	from 'react-router-dom'
 
-
+// App Imports
 import Signup				from './components/users/signup'
 import Signin				from './components/users/signin'
 import ProductList			from './components/products/productsList/productsList'
 import ProductCreate		from './components/products/productCreate/productCreate'
 import ProductEdit			from './components/products/productEdit/productEdit'
-
 import './App.css';
 
 function App() {

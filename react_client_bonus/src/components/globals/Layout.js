@@ -1,17 +1,28 @@
 // Imports
 import React, { Component } from 'react'
+import { Redirect } 		from "react-router-dom";
+import { connect } 			from 'react-redux';
 
 // Bootstrap imports
-import Container from 'react-bootstrap/Container'
+import Container            from 'react-bootstrap/Container'
 
 // App Imports
-import AppNavbar from './Navbar'
+import AppNavbar            from './Navbar'
 
-import { connect } 			from 'react-redux';
-import { Redirect } 		from "react-router-dom";
-
+/**
+ * Provide a Layout for connected users
+ *
+ * @class Layout
+ * @extends {Component}
+ */
 class Layout extends Component {
 
+    /**
+     * Render the component
+     *
+     * @returns
+     * @memberof Layout
+     */
     render () {
         // Kick out not connected user
         if( !this.props.loggedIn ) {

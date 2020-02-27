@@ -1,4 +1,10 @@
+/**
+ * @author Marc TONYE
+ * @description user API
+ */
+
 const express   = require('express')
+
 const User      = require('../schema/user')
 const auth      = require('../middleware/auth')
 
@@ -46,19 +52,22 @@ router.post('/users/login', async(req, res) => {
 */
 router.get('/users/me', auth, async(req, res) => {
     // View logged in user profile
-    res.send(req.user)
+    res.send( req.user )
 })
 
+/** 
+ * POST /users/me/logout
+ * Log user out of the application
+*/
 router.post('/users/me/logout', auth, async (req, res) => {
-    // Log user out of the application
     try {
-        req.user.tokens = req.user.tokens.filter((token) => {
+        req.user.tokens = req.user.tokens.filter( (token) => {
             return token.token != req.token
         })
         await req.user.save()
         res.send()
     } catch (error) {
-        res.status(500).send(error)
+        res.status( 500 ).send( error )
     }
 });
 

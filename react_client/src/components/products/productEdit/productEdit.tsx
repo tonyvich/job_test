@@ -1,18 +1,34 @@
 // Imports
-import React, { Component } from 'react'
-import Product from '../../../interface/product'
-import { AppConfig } from '../../../conf';
-import { RouteComponentProps } from 'react-router';
-import { Row, Col, Form, Button } from 'react-bootstrap'
+import React, { Component }         from 'react'
+import { RouteComponentProps }      from 'react-router';
+import { Row, Col, Form, Button }   from 'react-bootstrap'
 
+import { AppConfig }                from '../../../conf';
+import Product                      from '../../../interface/product'
+
+/**
+ * State Interface
+ *
+ * @interface IState
+ */
 interface IState {
     product:    Product
 }
 
+/**
+ * Route Params
+ */
 interface RouteParams {
     id?: string
 }
 
+/**
+ * Display Product Edit
+ *
+ * @export
+ * @class ProductEdit
+ * @extends {Component<RouteComponentProps<RouteParams>, IState>}
+ */
 export default class ProductEdit extends Component<RouteComponentProps<RouteParams>,IState> {
 
     readonly state: any = { product: {} }
@@ -32,6 +48,12 @@ export default class ProductEdit extends Component<RouteComponentProps<RoutePara
         .catch( console.log );
     }
     
+    /**
+     * Render Component 
+     *
+     * @returns
+     * @memberof ProductEdit
+     */
     render () {
         return (
             <div>
@@ -117,4 +139,5 @@ export default class ProductEdit extends Component<RouteComponentProps<RoutePara
             alert( 'Le product a été correctement modifié' )    
         })
     }
+    
 }

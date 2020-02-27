@@ -1,5 +1,6 @@
-/** 
- * Product API
+/**
+ * @author Marc TONYE
+ * @description PRODUCT Api
  */
 
 /**
@@ -191,7 +192,6 @@ router.delete( '/product/:id', auth, function( request, result ) {
             assert.equal(1, request.deletedCount);
             // Load product to send as socket signal
             const products      = await collection.find({}).toArray();
-            console.log( products );
             // Emit Socket
             io.emit("reloadProducts", products);
             // Response

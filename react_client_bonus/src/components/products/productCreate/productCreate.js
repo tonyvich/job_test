@@ -1,11 +1,11 @@
 // Imports
-import React, { Component } from 'react'
-import { Row, Col, Form, Button } from 'react-bootstrap'
+import React, { Component }         from 'react'
+import { Row, Col, Form, Button }   from 'react-bootstrap'
 
 // Redux
-import { connect } from 'react-redux';
-import { createProduct } from '../../../actions/products';
-import Layout from '../../globals/Layout'
+import { connect }                  from 'react-redux';
+import { createProduct }            from '../../../actions/products';
+import Layout                       from '../../globals/Layout'
 
 
 /**

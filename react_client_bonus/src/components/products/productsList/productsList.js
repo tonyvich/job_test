@@ -1,15 +1,23 @@
 // Imports
-import React, { Component } from 'react'
-import { Row, Col, Table, Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import socketIOClient from 'socket.io-client'
-import { appConfig } from '../../../confi'
-import Layout from '../../globals/Layout'
+import React, { Component }             from 'react'
+import { Row, Col, Table, Button }      from 'react-bootstrap'
+import { Link }                         from 'react-router-dom'
+import socketIOClient                   from 'socket.io-client'
+
+// App imports
+import { appConfig }                    from '../../../confi'
+import Layout                           from '../../globals/Layout'
 
 // Redux
-import { connect } from 'react-redux';
-import { listProduct, deleteProduct } from '../../../actions/products';
+import { connect }                      from 'react-redux';
+import { listProduct, deleteProduct }   from '../../../actions/products';
 
+/**
+ * List products and delete
+ *
+ * @class ProductsList
+ * @extends {Component}
+ */
 class ProductsList extends Component {
 
     state = {
@@ -32,7 +40,6 @@ class ProductsList extends Component {
         socket.on(
             "reloadProducts",
             ( data ) => {
-                console.log( data );
                 this.setState( { products: data });
             }
         )

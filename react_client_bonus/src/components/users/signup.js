@@ -1,10 +1,12 @@
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { userPostFetch } from '../../actions/user';
-import { Container, Col, Row, Form, Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import { Redirect } from "react-router-dom";
+import React, { Component } 					from 'react';
+import { Container, Col, Row, Form, Button } 	from 'react-bootstrap'
+import { Link } 								from 'react-router-dom'
+import { Redirect } 							from "react-router-dom";
+
+// Redux
+import { connect } 								from 'react-redux';
+import { userPostFetch } 						from '../../actions/user';
 
 /**
  * This component allow to signup in the app

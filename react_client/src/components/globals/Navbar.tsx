@@ -1,13 +1,25 @@
 // Imports
-import React, { Component } from 'react'
-import { LinkContainer } from 'react-router-bootstrap';
+import React, { Component } 	from 'react'
+import { LinkContainer } 		from 'react-router-bootstrap';
 
 // Bootstrap Imports
-import Navbar 	from 'react-bootstrap/Navbar'
-import Nav 		from 'react-bootstrap/Nav'
+import Navbar 					from 'react-bootstrap/Navbar'
+import Nav 						from 'react-bootstrap/Nav'
 
+/**
+ * Navbar with all main links
+ *
+ * @class AppNavbar
+ * @extends {Component}
+ */
 class AppNavbar extends Component {
 
+	/**
+	 * Render Component
+	 *
+	 * @returns
+	 * @memberof AppNavbar
+	 */
 	render () {
 		return (
 			<Navbar bg="light" expand="lg">

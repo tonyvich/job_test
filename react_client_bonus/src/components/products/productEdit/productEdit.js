@@ -1,13 +1,22 @@
 // Imports
-import React, { Component } from 'react'
-import { Row, Col, Form, Button } from 'react-bootstrap'
-import { editProduct, getProduct } from '../../../actions/products';
-import { connect } from 'react-redux';
-import Layout from '../../globals/Layout';
+import React, { Component }             from 'react'
+import { Row, Col, Form, Button }       from 'react-bootstrap'
+// App imports
+import Layout                           from '../../globals/Layout';
+// Redux
+import { editProduct, getProduct }      from '../../../actions/products';
+import { connect }                      from 'react-redux';
 
+/**
+ * Provide interface for product editing
+ *
+ * @class ProductEdit
+ * @extends {Component}
+ */
 class ProductEdit extends Component {
 
     state = { product : {} }
+
     /**
      * Load product to modify before rendering the view
      *
@@ -22,6 +31,12 @@ class ProductEdit extends Component {
         );                
     }
     
+    /**
+     * Render Component
+     *
+     * @returns
+     * @memberof ProductEdit
+     */
     render () {
         return (
             <Layout>

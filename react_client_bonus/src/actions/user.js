@@ -1,3 +1,7 @@
+/**
+ * User Actions (Redux)
+ */
+
 import { appConfig } from "../confi"
 
 /**
@@ -19,7 +23,6 @@ export const userPostFetch = user => {
             localStorage.setItem("token", data.token)
             dispatch( loginUser( data.user, false, true ) )
         }).catch( e => {
-            console.log( e );
             dispatch( loginUser( {}, true, false ))
         })
     }
@@ -53,8 +56,7 @@ export const userLoginFetch = user => {
                 localStorage.setItem("token", data.token)
                 dispatch( loginUser( data.user , false, true ) )
             }
-        }).catch( ( e ) => {
-                console.log( e );    
+        }).catch( ( e ) => { 
                 dispatch( loginUser( {}, true, false ) )
             } 
         )

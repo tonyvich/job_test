@@ -7,15 +7,32 @@ import { Redirect } from "react-router-dom";
 import Navbar 	from 'react-bootstrap/Navbar'
 import Nav 		from 'react-bootstrap/Nav'
 
+/**
+ * App Navbar
+ *
+ * @class AppNavbar
+ * @extends {Component}
+ */
 class AppNavbar extends Component {
 
 	state = { disconnect: false }
 
+	/**
+	 * User logout logic
+	 *
+	 * @memberof AppNavbar
+	 */
 	logout = ( event ) => {
 		this.setState( { disconnect: true } );
 		localStorage.removeItem( 'token' );
 	}
 
+	/**
+	 * Render the component
+	 *
+	 * @returns
+	 * @memberof AppNavbar
+	 */
 	render () {
 		if( this.state.disconnect ) {
 			return( 

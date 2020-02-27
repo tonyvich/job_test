@@ -3,7 +3,7 @@
  * @description This file regroup basic functions for the app
  */
 
-const fs                = require( 'fs' );                  // For file reading
+const fs = require( 'fs' );                  // For file reading
 
 exports.readJsonFile = function( filename ) {
     raw = fs.readFileSync( filename );

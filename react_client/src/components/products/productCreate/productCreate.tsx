@@ -1,17 +1,23 @@
 // Imports
-import React, { Component } from 'react'
-import { Row, Col, Form, Button } from 'react-bootstrap'
-import Product from '../../../interface/product';
-import * as Config from '../../../conf';
+import React, { Component }         from 'react'
+import { Row, Col, Form, Button }   from 'react-bootstrap'
+import Product                      from '../../../interface/product';
+import * as Config                  from '../../../conf';
 
 /**
- * Display component for storing product
+ * Display interface for storing product
  *
  * @class ProductCreate
  * @extends {Component}
  */
 export default class ProductCreate extends Component {
 
+    /**
+     * Render Component
+     *
+     * @returns
+     * @memberof ProductCreate
+     */
     render () {
         return (
             <div>

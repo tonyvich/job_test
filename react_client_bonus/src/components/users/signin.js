@@ -1,10 +1,17 @@
 import React, {Component} from 'react';
-import { connect } from 'react-redux';
-import { userLoginFetch, checkUserConnected } from '../../actions/user';
 import { Container, Col, Row, Form, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { Redirect } from "react-router-dom";
+// Redux
+import { userLoginFetch, checkUserConnected } from '../../actions/user';
+import { connect } from 'react-redux';
 
+/**
+ * Display login for user
+ *
+ * @class Signin
+ * @extends {Component}
+ */
 class Signin extends Component {
     
     /** 
@@ -15,6 +22,11 @@ class Signin extends Component {
         password: ""
     }
 
+    /**
+     * Redirect if the user is connected
+     *
+     * @memberof Signin
+     */
     componentDidMount() {
         this.props.checkUserConnected()
     }

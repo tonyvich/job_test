@@ -1,3 +1,7 @@
+/**
+ * User Reducer
+ */
+
 const initialState = {
     currentUser:        {},
     error:              false,

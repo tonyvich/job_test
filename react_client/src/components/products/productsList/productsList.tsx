@@ -1,19 +1,38 @@
 // Imports
-import React, { Component } from 'react'
-import { Row, Col, Table, Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import Product from './../../../interface/product'
-import * as Config from '../../../conf';
-import socketIOClient from 'socket.io-client'
+import React, { Component }         from 'react'
+import { Link }                     from 'react-router-dom'
+import { Row, Col, Table, Button }  from 'react-bootstrap'
 
+import socketIOClient               from 'socket.io-client'
+
+import * as Config                  from '../../../conf';
+import Product                      from './../../../interface/product'
+
+/**
+ * Props Interface
+ *
+ * @interface IProps
+ */
 interface IProps {
     title: string;
 }
 
+/**
+ * Component States
+ *
+ * @interface IState
+ */
 interface IState {
     products: Array<Product>
 }
 
+/**
+ * Products List Display
+ *
+ * @export
+ * @class ProductsList
+ * @extends {Component<IProps, IState, Product>}
+ */
 export default class ProductsList extends Component<IProps, IState, Product> {
 
     readonly state = { products: [] }
@@ -92,7 +111,7 @@ export default class ProductsList extends Component<IProps, IState, Product> {
     }
 
     /**
-     * Provide logic for product deletion
+     * Provide logic for product removal
      *
      * @memberof ProductsList
      */
@@ -106,5 +125,6 @@ export default class ProductsList extends Component<IProps, IState, Product> {
             alert( 'Le product a été correctement Supprimé' )    
         })
     }
+    
 }
 

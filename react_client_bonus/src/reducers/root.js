@@ -1,3 +1,7 @@
+/**
+ * Root Reducer
+ */
+
 // Imports
 import { combineReducers } from 'redux'
 

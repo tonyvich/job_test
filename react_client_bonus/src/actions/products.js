@@ -1,3 +1,7 @@
+/**
+ * Product Actions (Redux)
+*/
+
 import { appConfig } from '../confi'
 
 /**
@@ -121,11 +125,10 @@ export const editProduct = ( id, product) => {
 }
 
 /** 
- * Get Product
+ * Get Product Action
 */
 export const getProduct = ( id ) => {
     return dispatch => {
-        console.log( 'call' );
         return fetch( 
             appConfig.apiUrl + '/product/' + id,
             {

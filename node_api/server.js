@@ -4,7 +4,7 @@
  * This file is the entry point of node js Server
  */
 
-/** 
+/**
  * Global requirements
  */  
 const express           = require( 'express' );            

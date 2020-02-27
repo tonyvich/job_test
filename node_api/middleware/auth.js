@@ -1,5 +1,10 @@
-const jwt = require('jsonwebtoken')
-const User = require('../schema/user')
+/**
+ * @author Marc TONYE
+ * @description Auth Middleware
+ */
+
+const jwt       = require('jsonwebtoken')
+const User      = require('../schema/user')
 
 const auth = async(req, res, next) => {
     const token = req.header('Authorization').replace('Bearer ', '')
@@ -15,6 +20,6 @@ const auth = async(req, res, next) => {
     } catch (error) {
         res.status(401).send({ error: 'Not authorized to access this resource' }).end();
     }
-
 }
+
 module.exports = auth

@@ -1,3 +1,6 @@
+/**
+ * Product Reducer
+ */
 const initialState = {
     products:   [],
     product:    {},
@@ -13,7 +16,6 @@ export default function product( state = initialState, action ) {
         case 'PRODUCTS_FETCH':
             return {...state, products: action.payload, error: action.error }
         case 'PRODUCT_FETCH':
-            console.log( state );
             return {...state, product: action.payload, error: action.error }
         default:
             return state;

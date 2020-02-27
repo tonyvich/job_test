@@ -1,6 +1,14 @@
-const mongoose = require('mongoose')
-const bcrypt = require('bcryptjs')
-const jwt = require('jsonwebtoken')
+/**
+ * @author Marc TONYE
+ * @description User Schema
+ */
+
+/**
+ * Requirements
+ */
+const mongoose  = require('mongoose')
+const bcrypt    = require('bcryptjs')
+const jwt       = require('jsonwebtoken')
 
 /**
  * Schema Definition
